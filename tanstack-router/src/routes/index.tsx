@@ -3,17 +3,14 @@ import { FileRoute as aboutRoute } from "./About";
 import { FileRoute as rootRoute } from "./Root";
 import { FileRoute as indexRoute } from "./IndexRoute";
 import { FileRoute as RemoteRoute } from "remote/App";
+// would be really cool if we could do something like this:
+// import * as routes from '../routes/*'
 
 const remoteRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: "/remote",
-  component: RemoteRoute
+  path: RemoteRoute.path,
+  component: RemoteRoute.component
 });
-
-export default { routes: remoteRoute, aboutRoute, rootRoute, indexRoute };
-
-// would be really cool if we could do something like this:
-// import * as routes from '../routes/*'
 
 const routes = [indexRoute, aboutRoute, remoteRoute];
 
@@ -29,3 +26,5 @@ declare module "@tanstack/react-router" {
     router: typeof router;
   }
 }
+
+export default { routes: remoteRoute, aboutRoute, rootRoute, indexRoute };
