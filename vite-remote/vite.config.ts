@@ -12,8 +12,7 @@ export default defineConfig({
       remotes: {
         host: "http://localhost:5000/assets/remoteEntry.js"
       },
-      exposes: { "./App": "./src/App.tsx" },
-      shared: ["react", "react-dom"]
+      exposes: { "./App": "./src/App.tsx" }
     })
   ],
   build: {
