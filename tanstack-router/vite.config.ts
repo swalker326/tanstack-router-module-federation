@@ -15,7 +15,7 @@ export default defineConfig({
       exposes: {
         "./Routes": "./src/routes"
       },
-      shared: ["react", "react-dom"]
+      shared: ["react", "react-dom", "@tanstack/react-router"]
     })
   ],
   build: {
