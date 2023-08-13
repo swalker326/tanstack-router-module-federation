@@ -13,7 +13,8 @@ export default defineConfig({
         remote: "http://localhost:5001/assets/remoteEntry.js"
       },
       exposes: {
-        "./Routes": "./src/routes"
+        "./Routes": "./src/routes",
+        ".ModuleRouterProvider": "./src/main"
       },
       shared: ["react", "react-dom", "@tanstack/react-router"]
     })

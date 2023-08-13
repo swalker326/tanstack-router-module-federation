@@ -12,7 +12,7 @@ export default defineConfig({
       remotes: {
         host: "http://localhost:5000/assets/remoteEntry.js"
       },
-      exposes: { "./App": "./src/App.tsx" }
+      exposes: { "./routes": "./src/routeTree.gen.ts" }
     })
   ],
   build: {

@@ -16,5 +16,14 @@ declare module "remote/App" {
       >
     >;
   };
+  let App: RouteComponent<
+    RouteProps<
+      unknown,
+      object,
+      Record<never, string>,
+      RouteContext,
+      RouteContext
+    >
+  >;
   let FileRoute: FileRouteType;
 }
