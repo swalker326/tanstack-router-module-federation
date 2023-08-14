@@ -31,7 +31,6 @@ export const route = new RootRoute({
         >
           remote
         </Link>
-
       </div>
       <hr />
       <Outlet />

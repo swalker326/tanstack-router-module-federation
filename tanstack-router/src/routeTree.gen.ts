@@ -1,5 +1,4 @@
 import { route as rootRoute } from './routes/_root'
-
 import { route as indexRoute } from './routes/index'
 import { route as aboutRoute } from './routes/about'
 

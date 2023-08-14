@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
@@ -7,14 +7,16 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "host",
+      name: "router",
       filename: "remoteEntry.js",
       remotes: {
-        router: "http://localhost:5002/assets/remoteEntry.js"
+        host: "http://localhost:5000/assets/remoteEntry.js",
+        remote: "http://localhost:5001/assets/remoteEntry.js",
       },
       exposes: {
-        "./routes": "./src/routeTree.gen.ts"
+        "./router": "./src/router",
       },
+      shared: ["react", "react-dom", "@tanstack/react-router"]
     })
   ],
   build: {
